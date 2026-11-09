@@ -25,7 +25,7 @@ class TabbedHipotGUI:
         self.notebook.add(self.main_tab, text="Main Control")
         self.notebook.add(self.emu_tab, text="Emulator Settings")
 
-        self.setup_main_tab()
+        self.setup_main_tab() 
         self.setup_emu_tab()
 
         self.root.bind_all("<KeyPress>", self.handle_keypress)
