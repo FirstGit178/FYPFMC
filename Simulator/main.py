@@ -50,6 +50,7 @@ class TabbedHipotGUI:
         self.btn_frame = tk.Frame(self.main_tab)
         self.btn_frame.pack(fill="x", side="bottom", pady=20)
         ttk.Button(self.btn_frame, text="Run Standard", command=lambda: self.controller.start(False)).pack(side="left", padx=5, expand=True)
+        # To be removed, as settings tab now allows to simulate fault.
         ttk.Button(self.btn_frame, text="Demo Fault", command=lambda: self.controller.start(True)).pack(side="left", padx=5, expand=True)
         tk.Button(self.btn_frame, text="STOP", bg="red", fg="white", command=self.controller.emergency_shutdown).pack(side="left", padx=5, expand=True)
         ttk.Button(self.btn_frame, text="Reset", command=self.controller.reset).pack(side="left", padx=5, expand=True)
