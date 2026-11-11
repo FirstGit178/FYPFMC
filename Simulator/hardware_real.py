@@ -4,15 +4,16 @@
 class ActualHipotTester:
     """The real driver for the USB Hipot Tester."""
     def set_voltage(self, voltage):
-        # Put your actual USB write command here
+        # Put actual USB write command here
         print(f"REAL HARDWARE: Setting voltage to {voltage}V")
 
     def read_leakage(self, voltage, target_voltage):
-        # Put your actual USB read command here
+        # Put actual USB read command here
         return 0.0
 
     def safe_output(self):
-        # Put your actual 'Kill Power' command here
+    #    Place the Kill Power command here; however, the tester will have a physical E-Stop button as a backup safety option.
+    #    The tester will not be able to turn on the output again until the E-Stop is released
         print("REAL HARDWARE: Emergency Safe Output Activated")
 
 class ActualESP32:
